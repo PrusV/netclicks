@@ -164,7 +164,7 @@ hamburger.addEventListener("click", () => {
     closeDropdown();
 });
 
-document.body.addEventListener("click", event => {
+document.addEventListener("click", event => {
     const target = event.target;
 
     if (!target.closest(".left-menu")) {
@@ -179,11 +179,11 @@ document.body.addEventListener("click", event => {
 //NOTE Відкритя dropdown в left-menu
 
 leftMenu.addEventListener("click", event => {
-    event.preventDefault();
     const target = event.target;
     const dropdown = target.closest(".dropdown");
 
     if (dropdown) {
+        event.preventDefault();
         dropdown.classList.toggle("active");
         leftMenu.classList.add("openMenu");
         hamburger.classList.add("open");
