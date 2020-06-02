@@ -392,6 +392,9 @@ p {
     height: 0;
 }
 
+.git{
+	font-size: medium;
+}
 
 main {
     margin-top: 60px;
